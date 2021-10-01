@@ -123,6 +123,7 @@
 }
 
 
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -151,4 +152,96 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+/* ex 12 straight */
+.ex-12-button:hover .ex-12-top-white{
+    animation: transfer-top 2s linear;
+}
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: transfer-bottom 2s linear;
+}
+@keyframes transfer-top {
+    0% {
+        left:10%;
+    }
+    50% {
+        left:70%;
+    }
+    100% {
+        left:10%;
+    }
+   
+}
+
+@keyframes transfer-bottom {
+    0% {
+        right:20%;
+    }
+    50% {
+        right:70%;
+    }
+    100% {
+        right:20%;
+    }
+   
+}
+/* ex 13 rotating */
+.ex-13-button:hover .ex-13-top-white{
+    animation: rotating-top 2s linear;
+}
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: rotating-bottom 2s linear;
+}
+
+@keyframes rotating-top {
+    0% {
+        left:10%;
+    }
+    20% {
+        left:75%;
+        top:-10px;
+    }
+    40% {
+        top:50px;
+        left:75%
+    }
+    60% {
+        top:50px;
+        left:-5%;
+    }
+    80% {
+        top: -10px;
+        left:-5%;
+    }
+    100%{
+        left: 10%;
+    }
+   
+}
+
+@keyframes rotating-bottom {
+    0% {
+        right:20%;
+    }
+    20% {
+        right: 75%;
+        bottom:-10px
+    }
+    40% {
+        right: 75%;
+        bottom:50px;
+    }
+    60% {
+        right:-5%;
+        bottom:50px;
+    }
+    80% {
+        right:-15%;
+        bottom:-10px;
+    }
+    100%{
+        right: 20%;
+    }
+   
 }
